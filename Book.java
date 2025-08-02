@@ -1,29 +1,25 @@
 public class Book {
     private String title;
     private String author;
-    private String ISBN;
+    private String isbn;
+    private boolean isAvailable;
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
+    //Constructor
+    public Book(String title, String author, String isbn){
         this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
         this.author = author;
+        this.isbn = isbn;
+        this.isAvailable = true;
     }
 
-    public String getISBN() {
-        return ISBN;
-    }
+    //Getters
+    public String getTitle() { return title; }
+    public String getAuthor() { return author; }
+    public String getISBN() { return isbn; }
+    public Boolean getIsAvailable() { return isAvailable; }
 
-    public void setISBN(String iSBN) {
-        ISBN = iSBN;
+    //Setter for Availability
+    public void setIsAvailable(boolean available){
+        isAvailable = available;
     }
 }
