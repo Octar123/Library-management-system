@@ -34,4 +34,29 @@ public class Library {
         }
         return null;
     }
+
+    // issue book logic
+    public void issueBook(String isbn, int memberId){
+        Book book = findBookByISBN(isbn);
+        Member member = findMemberBYId(memberId);
+
+        if(book == null){
+            System.out.println("Error: Book with ISBN " + isbn + " not found.");
+            return;
+        }
+        if(member == null){
+            System.out.println("Error: Member with ID " + memberId + " not found.");
+            return;
+        }
+
+        if(!book.getIsAvailable()){
+            System.out.println("Error: Book '" + book.getTitle() + "' is already cheackd out.");
+            return;
+        }
+
+        book.setIsAvailable(false);
+        member.borrowBook(book);
+        System.out.println("Success: '" + book.getTitle() + "' has been issued to " + member.getName() + ".");
+
+    }
 }

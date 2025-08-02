@@ -5,24 +5,17 @@ public class Main {
 
         // Create some books and member objects
 
-        Book book1 = new Book();
-        book1.setISBN("978-0321765723");
-        book1.setTitle("The Lord of the Rings");
-        book1.setAuthor("J.R.R. Tolkien");
+        Book book1 = new Book("The Lord of the Rings", "J.R.R. Tolkien", "123");
 
-        Member member1 = new Member();
-        member1.setMemberId(101);
-        member1.setName("Aragorn");
+        Member member1 = new Member(101, "Aragorn");
 
         // add book and member to the library
         library.addBook(book1);
         library.addMember(member1);
 
-        //Print
-        Book foundBook = library.findBookByISBN("978-0321765723");
-        Member foundMember = library.findMemberBYId(101);
-
-        System.out.println("Found Book: " + foundBook.getTitle());
-        System.out.println("Found Member: " + foundMember.getName());
+        //Issue Book
+        library.issueBook("123", 101);
+        library.issueBook("123", 101);
+        library.issueBook("456", 101);
     }
 }
