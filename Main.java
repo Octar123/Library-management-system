@@ -17,5 +17,8 @@ public class Main {
         library.issueBook("123", 101);
         library.issueBook("123", 101);
         library.issueBook("456", 101);
+        
+        library.returnBook("123", 101);
+
     }
 }

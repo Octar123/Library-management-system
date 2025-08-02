@@ -57,6 +57,24 @@ public class Library {
         book.setIsAvailable(false);
         member.borrowBook(book);
         System.out.println("Success: '" + book.getTitle() + "' has been issued to " + member.getName() + ".");
+    }
 
+    public void returnBook(String isbn, int memberId){
+        Book book = findBookByISBN(isbn);
+        Member member = findMemberBYId(memberId);
+
+        if(book == null || member == null){
+            System.out.println("Invalid Book or Member details.");
+            return;
+        }
+
+        if(!member.getBorrowedBooks().contains(book)){
+            System.out.println("Error: " + member.getName() + " did not borrow this book.");
+            return;
+        }
+
+        book.setIsAvailable(true);
+        member.returnBook(book);
+        System.out.println("Success: '" + book.getTitle() + "' has been returned by " + member.getName() + ".");
     }
 }
