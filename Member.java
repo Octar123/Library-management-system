@@ -15,7 +15,10 @@ public class Member {
     public void borrowBook(Book book){
         this.borrowedBooks.add(book);
     }
-
+    
+    public void returnBook(Book book){
+        this.borrowedBooks.remove(book);
+    }
     //Getters
     public int getMemberId() { return memberId; }
     public String getName() { return name; }
