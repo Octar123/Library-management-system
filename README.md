@@ -48,4 +48,4 @@ A simple, interactive command-line application built with Java to manage a libra
 *(This part is optional but highly recommended!)*
 You can record a short GIF of your terminal running the application and add it here. Tools like **ScreenToGif** (Windows) or **Kap** (Mac) make this easy. A simple screenshot of the menu also works.
 
-![Demo GIF or Screenshot Here]("C:\Users\ranja\OneDrive\Pictures\Screenshots\Screenshot 2025-08-02 160914.png")
+![Demo GIF or Screenshot Here](C:\Users\ranja\OneDrive\Pictures\Screenshots\Screenshot 2025-08-02 160914.png)
